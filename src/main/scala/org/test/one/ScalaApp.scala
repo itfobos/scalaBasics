@@ -3,10 +3,10 @@ package org.test.one
 
 object ScalaApp {
   def main(args: Array[String]): Unit = {
-    var counterEntity = CounterEntity()
+    var counterEntity = CounterEntity(2)
     println(counterEntity.counter)
 
-    counterEntity = CounterEntity(3)
+    counterEntity = counterEntity.copy(counter = counterEntity.counter * 2)
     println(counterEntity.counter)
   }
 }
